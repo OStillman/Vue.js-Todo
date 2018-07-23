@@ -761,7 +761,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-#items ul {
+.container #addItem input {
+  width: 100%; }
+.container #items ul {
   margin: 0;
   list-style: none;
   float: left; }
