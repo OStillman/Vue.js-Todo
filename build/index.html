@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sample To-do List</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        #items ul {
+            margin: 0;
+            list-style: none;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div id="title">
+            <h1 style="text-align: center">{{message}}</h1>
+        </div>
+        <div id="items">
+            <ul>
+                <todo-item v-for="item in itemList" v-bind:todo="item" v-bind:key="item.id">
+                </todo-item>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        var title = new Vue({
+            el: "#title",
+            data: {
+                message: "Your Todo List"
+            }
+        });
+
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li><input type="checkbox"> {{todo.text}}</li>'
+        });
+
+        var items = new Vue({
+            el: "#items",
+            data: {
+                itemList: [{
+                        id: 0,
+                        text: "Veg"
+                    },
+                    {
+                        id: 1,
+                        text: "Something else"
+                    },
+                    {
+                        id: 2,
+                        text: "Another"
+                    },
+                    {
+                        id: 3,
+                        text: "Last One"
+                    }
+                ]
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Run Permission fix
+
+sudo chmod -R 0755 ./build
+
+

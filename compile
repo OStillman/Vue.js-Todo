@@ -1,0 +1,6 @@
+#!/bin/bash
+# Compile the sass
+
+echo "Just a moment..."
+sass sass/main.sass build/css/main.css
+echo "Complete!"
