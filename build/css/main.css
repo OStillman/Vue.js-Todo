@@ -761,4 +761,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+#items ul {
+  margin: 0;
+  list-style: none;
+  float: left; }
+
 /*# sourceMappingURL=main.css.map */
