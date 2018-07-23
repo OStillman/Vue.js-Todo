@@ -15,8 +15,9 @@
         </div>
         <div id="items">
             <ul>
-                <todo-item v-for="item in itemList" v-bind:todo="item" v-bind:key="item.id">
-                </todo-item>
+                <li v-for="todo in todos">
+                    <input type="checkbox"> {{todo.text}}
+                </li>
             </ul>
         </div>
     </section>
@@ -29,29 +30,20 @@
             }
         });
 
-        Vue.component('todo-item', {
-            props: ['todo'],
-            template: '<li><input type="checkbox"> {{todo.text}}</li>'
-        });
-
-        var items = new Vue({
+        var app4 = new Vue({
             el: "#items",
             data: {
-                itemList: [{
-                        id: 0,
-                        text: "Veg"
+                todos: [{
+                        text: 'Item'
                     },
                     {
-                        id: 1,
-                        text: "Something else"
+                        text: 'Item'
                     },
                     {
-                        id: 2,
-                        text: "Another"
+                        text: 'Another item'
                     },
                     {
-                        id: 3,
-                        text: "Last One"
+                        text: 'And the last item'
                     }
                 ]
             }
